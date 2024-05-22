@@ -1,0 +1,122 @@
+/*Courses.css*/
+.course-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, rgb(255, 255, 255) 1%, rgba(0, 0, 255, 0.284) 8%, rgb(255, 236, 213) 91%);
+    border-radius: 5px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.course {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.course::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    padding: 1px;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.47) 10%, rgb(255, 236, 213) 90%);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.course-image {
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.course-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, rgb(255, 255, 255) 1%, rgba(0, 0, 255, 0.284) 8%, rgb(255, 236, 213) 91%);
+    border-radius: 5px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.course-details h1 {
+    display: inline-block;
+    position: relative;
+}
+
+.course-details h1:hover {
+    mask-image: linear-gradient(-75deg, rgb(0, 0, 0) 30%, #d0d0d08b 50%, rgb(0, 0, 0) 70%);
+    mask-size: 200%;
+    animation: wave 2s infinite;
+}
+
+@keyframes wave {
+    from {
+        mask-position: 150%;
+    }
+
+    to {
+        mask-position: -50%;
+    }
+}
+
+.course-details p {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.course-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.course-details ul li::before {
+    content: '\2705';
+    padding-right: 10px;
+    color: green;
+}
+
+.course-details button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    align-items: center;
+        background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        box-shadow: -8px 8px 12px 0 rgba(0, 0, 0, 0.3), 12px -12px 16px rgba(255, 255, 255, 0.25);
+}
+
+.course-details button:hover {
+    background-color: #45a049;
+    color: white;
+}

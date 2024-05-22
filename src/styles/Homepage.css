@@ -1,0 +1,233 @@
+/* Homepage.css */
+
+.homepage {
+    padding-top: 65px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homepage-slider {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    justify-content: center;
+}
+
+.homepage-slide {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 300px;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.homepage-slide:hover {
+    transform: translateY(-10px);
+}
+
+.homepage-course-image {
+    max-width: 100px;
+    max-height: 100px;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.homepage-slide:hover .homepage-course-image {
+    max-width: 80px;
+    max-height: 80px;
+    transform: translate(-50%, -120%);
+}
+
+.homepage-slide-details {
+    background: rgba(255, 255, 255, 0.3);
+    padding-bottom: 15px;
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    opacity: 0;
+    transform: translateY(100%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.homepage-slide:hover .homepage-slide-details {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.homepage-slide-details h2 {
+    font-size: 1.1rem;
+    display: inline-block;
+    position: relative;
+}
+
+.homepage-slide-details h2:hover {
+    mask-image: linear-gradient(-75deg, rgb(0, 0, 0) 30%, #d0d0d08b 50%, rgb(0, 0, 0) 70%);
+    mask-size: 200%;
+    animation: wave 2s infinite;
+}
+
+@keyframes wave {
+    from {
+        mask-position: 150%;
+    }
+
+    to {
+        mask-position: -50%;
+    }
+}
+
+.homepage-slide-details span {
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.Logo {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+.slider-with-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.47) 10%, rgb(255, 236, 213) 90%);
+    border-radius: 0.5rem;
+}
+
+.courses-button {
+    margin-top: 20px;
+}
+
+.courses-button button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(255, 255, 255, 0.25));
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    box-shadow: -8px 8px 12px 0 rgba(0, 0, 0, 0.3), 12px -12px 16px rgba(255, 255, 255, 0.25);
+}
+
+.courses-button button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.intro {
+    margin-top: 80px;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    min-width: 250px;
+    width: 100%;
+    margin-top: 200px;
+    background: linear-gradient(to right, rgb(40, 40, 133) 10%, rgb(255, 236, 213) 90%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.tabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.tabs__items {
+    margin-top: 30px;
+    display: flex; /* Add flex display */
+}
+.tabs__item {
+    margin-right: 15px;
+    margin-left: 15px;
+    color: white;
+        display: inline-block;
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 0 2rem;
+}
+.tabs__item:after {
+    background-color: #ffffff;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    border-radius: 5px;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.tabs__item:hover::after {
+    width: 100%;
+}
+
+.tabs__item.active:after {
+    background-color: #ffffff;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: width .3s ease-in-out;
+}
+
+.footer_p{
+    color: white;
+}
+
+.tabs__body {
+    margin-top: 30px;
+}
+
+.tabs__block {
+    display: none;
+}
+
+.tabs__block.active {
+    display: block;
+}
+.email{
+    color: white;
+    margin-top: 15px;
+}

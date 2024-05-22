@@ -1,0 +1,173 @@
+/*App.css*/
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  padding: 5px;
+  height: 45px;
+  width: 100%;
+  z-index: 1;
+  border: 2px solid transparent;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.47) 10%, rgb(255, 236, 213) 90%);
+  z-index: -1;
+}
+
+header>a {
+  color: white;
+  display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+  padding: 0 2rem;
+}
+
+header>a:after {
+  background-color: #ffffff;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  border-radius: 5px;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+
+header>a:hover:after,
+header>a:focus:after {
+  width: 100%;
+}
+header a.active:after {
+  background-color: #ffffff;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  transition: width .3s ease-in-out;
+}
+h1 {
+  text-align: center;
+  font-size: 30px;
+    position: relative;
+}
+h1:hover {
+  mask-image: linear-gradient(-75deg, rgb(0, 0, 0) 30%, #d0d0d08b 50%, rgb(0, 0, 0) 70%);
+  mask-size: 200%;
+  animation: wave 2s infinite;
+}
+
+@keyframes wave {
+  from {
+    mask-position: 150%;
+  }
+
+  to {
+    mask-position: -50%;
+  }
+}
+.head {
+  position: fixed;
+  top: 59px;
+  width: 100%;
+  z-index: 1;
+  background-color: #d6e2ffcc;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 210px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.head p {
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+input {
+  height: 40px;
+  width: 230px;
+  margin: 15px;
+  padding-left: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(104, 118, 149, 0.25);
+  box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.5), inset -2px -2px 7px rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  
+}
+
+input:focus {
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2), inset -1px -1px 2px rgba(255, 255, 255, 0.5);
+  background-color: rgb(173, 185, 255);
+}
+button {
+  height: 40px;
+  margin: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  border: none;
+  border-radius: 2px;
+
+  align-items: center;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.22), rgba(180, 202, 255, 0.25));
+    border-radius: 50px;
+    justify-content: center;
+    box-shadow: -8px 8px 12px 0 rgba(0, 0, 0, 0.3), 12px -12px 16px rgba(255, 255, 255, 0.25);
+}
+button:hover {
+  background-color: rgb(173, 185, 255);
+}
+li {
+  list-style-type: none;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.buttons-on-head{
+  display: flex;
+  justify-content: space-evenly
+}

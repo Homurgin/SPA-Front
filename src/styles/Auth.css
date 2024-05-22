@@ -1,0 +1,39 @@
+/*Auth.css*/
+.greetings{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+.info{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.red_button{
+    width: 180px;
+    display: flex;
+    
+}
+.red_button:hover {
+    background-color: rgb(255, 71, 71);
+    color: white;
+}
+.course-image-auth{
+    max-width: 100px;
+        max-height: 100px;
+        margin-left: 20px;
+}
+
+
+
+.course-details .red_button:hover {
+    background-color: rgb(255, 71, 71);
+    color: white;
+}
+.content_ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
